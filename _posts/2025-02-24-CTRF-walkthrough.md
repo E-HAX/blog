@@ -8,6 +8,8 @@ author: stani
 
 ## EHAX’s CTRF Captured Day 0 of Invictus!
 
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/Debrief.jpg)
+
 In the first edition of CTRF, we successfully popularized CTRF in a more gamified way as a treasure hunt, attracting massive participation. Our volunteers were kept busy for the entire three-hour event. Both the team and the participants thoroughly enjoyed the experience, making our event a huge success.
 
 ## What is CTRF?
@@ -16,6 +18,11 @@ CTRF stands for Capture the Real Flags. Similar to a treasure hunt, it consists 
 
 For our event, there were 9 clues leading to different locations within DTU campus, where volunteers provided the next clue upon validating all the previous chits. Once all 9 clues were collected, participants were directed to the final location—the BR Ambedkar Auditorium of DTU—where they attended the prize-giving ceremony after the formal inauguration of Invictus 2025. The first clue was randomized, while the remaining ones were given dynamically by volunteers based on the team’s progress. The event was held offline on February 15 at DTU, running from 11 AM to 2 PM.
 
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/Focus.JPG)
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/Radio.JPG)
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/Instruction.JPG)
+
+
 ## Stats
 
 - **476** Registered Participants [on Unstop]
@@ -23,28 +30,67 @@ For our event, there were 9 clues leading to different locations within DTU camp
 - **68** Teams during the event
 - **Number of teams with all clues solved:** 13
 
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/Crowd.JPG)
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/Focus%202.JPG)
+
 ### Winners:
 
 - **First place:** *Door Knobs* – 1:27 PM (hunt-end at Raj Soin)
 - **Second place:** *Hell Fire Hawks* – 1:29 PM (hunt-end at Basketball Court)
 - **Third place:** *Segfault seeker* – 1:30 PM (hunt-end at Raj Soin)
 
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/Winner.JPG)
+
 ## Clues During the Hunt
 
 There are in total 9 clues in the hunt, given in a unique order for each team
 
-- **"ehax loves to dance and post it on Insta"** – Solve the Dancing Man Cipher using a reel caption featuring four volunteers posing. *(FLAG Point)*
-- **"iAvgWZ8V"** – Use Pastebin (hinted in the clue sheet) to obtain a drive link containing a mathematical problem. Solving it provides coordinates to input into Google Maps, leading to the location. *(Avahan Mural at Sports Complex)*
-- **"Smile, you’re on camera. The ship is sinking."** – Reach Titanic Point (*EE Dept*), click a smiling picture at the given number on the poster (*Stavya*), and a volunteer will approach. *(Electric Department entry point through OAT)*
-- **"uggc://punyy.runk.grpu:9001/"** – Apply ROT13 to decrypt Caesar’s cipher, giving link to a website whose source code when seen HTML source code reveals a Japnese text which when transalted gives "Waku Waku" which is famous line of `Anya` - a anime character [SpyX Family] behind the water tank near *DOD*. *(Anya on wall at the DOD Water Tank)*
+- **"ehax loves to dance and post it on Insta"**
 
-waku waku img
+Solve the Dancing Man Cipher using a reel (**[Watch here](https://www.instagram.com/reel/DGELDRrT3Vu/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)**) posted on ehax insta account (@ehax_dtu) featuring four volunteers posing as letters of dance man cipher giving hint of `FLAG` location when decoded. *(FLAG Point)*
 
-- **"He’s got nobody to talk to… must be a Discord bot."** – The Discord link given in CTRF rulebook . *(HIMS Chocolate Guy)*
-- **"Go to the closed canteen and find the flag."** – A QR code at the location leads to a Google Meet link. Track the runner to get twaku waku imghe next clue.
-- **"I wonder how Anonimbus promoted this event."** – Check the CTRF Promo Reel. *(Basketball Court)*
-- **"Tune into 101000000Hz."** – Using a radio antenna while roaming the campus, participants receive a clear signal saying "Baw Baw." *Stavya* listens and provides the next clue. *(Pragya Bhawan)*
-- **"Free if more than 1800''"** – Deciphering it reveals "30 minutes," referencing Domino’s tagline—"Delivery in 30 minutes or free." *(Raj Soin)*
+
+- **"iAvgWZ8V"**
+
+Given text is a Pastebin backlink (pastebin logo hint given in chit). On that backlink another link of a google drive image can be obtained which contains a mathematical problem. Solving it provides coordinates (latitude and longitude), which can be used as input to Google Maps revealing the target location. *(Avahan Wall at Sports Complex)*
+
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/avahan.png)
+
+
+- **"Smile, you’re on camera. The ship is sinking."**
+
+Teams has to reach Titanic Point (*ECE Dept*) with given hint of `sinking ship` where they will see a poster (shown below), they had to click their smiling picture and send it to the given number on the poster which was placed at titanic point, and only then the volunteer placed at titanic point will give them the next clue. *(Electric Department entry point through OAT)*
+
+- **"uggc://punyy.runk.grpu:9001/"**
+
+In given text teams have to apply ROT13 to decrypt Caesar’s cipher which will give them a link to a website (http://chall.ehax.tech:9001/) whose source code when seen in HTML reveals a Japnese text which when transalted gives "Waku Waku" which is famous line of `Anya` - a anime character [SpyX Family] whose wall art is there in DTU behind the water tank near `Design Department`. *(Anya on wall at the DOD Water Tank)*
+
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/waku.png)
+
+- **"He’s got nobody to talk to… must be a Discord bot."**
+
+The Discord link of EHAX server given in CTRF rulebook, where there is a EHAXXX CTRF Bot (with CTRF logo), teams have to use #bot-commands channel to execute basic linux commands like (pwd, ls, cat) in this format `!exec ls`, to get hint for next location the following commands given below have to be executed. 
+
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/discord.png)
+
+This given image in `CLUE` of a McDonald guy, which is hint to next location. *(HIMS Chocolate Guy)*
+
+- **"Go to the closed canteen and find the flag."**
+
+Teams have to reach the old canteen where a QR code is hidden, that QR code is a link to a google meet. One of the volunteer is roaming around campus with that google meet joined and camera on, and the task for teams is to catch the volunteer with help of volunteer's camera feed and then the volunteer will give them the next clue.
+
+
+- **"I wonder how Anonimbus promoted this event."** – 
+
+Promotional through instagram reels uploaded on ehax insta gives a hint to next location  **[Watch here](https://www.instagram.com/reel/DGAv07ZJrur/?utm_source=ig_web_copy_link&igsh=MzRlODBiNWFlZA==)**  *(Basketball Court)*
+
+- **"Tune into 101000000Hz."**
+
+Teams have use their mobile radio app with earlead as antenna and roam around the campus tuning the frequency to 101MHz and try to catch the frequency which is emmited by a RaspberryPi (at target location), as it is tuned to emit out a frequency of 101MHz, where a continuous audio is being played in loop giving hint to next location *(Pragya Bhawan)*
+
+- **"Free if more than 1800''"** – 
+
+Deciphering the given 1800'' as 18000 seconds which is equal 30 minutes, Thus text becomes "Free if more than 30 minutes" giving hint of Dominos as the next location *(Raj Soin)*
 
 
 ## Event Materials
@@ -96,5 +142,8 @@ waku waku img
 
 ## Conclusion
 The first edition of CTRF was an immense success, with enthusiastic participation and a thrilling hunt that kept everyone engaged. The excitement and joy on the faces of participants as they solved clues and raced across the campus were truly rewarding. Many shared that it was not just a test of intellect but also an adventure that made them explore DTU in a new and fun way. The feedback we received was overwhelmingly positive, with participants appreciating the seamless organization and the creativity behind the challenges. This event not only brought together tech and non-tech students but also fostered teamwork, problem-solving, and a spirit of competition. We look forward to making the next edition of CTRF even bigger and better!
+
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctf/Team%20EHAX.jpeg)
+
 
 

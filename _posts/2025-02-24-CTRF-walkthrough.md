@@ -61,6 +61,8 @@ Given text is a Pastebin backlink (pastebin logo hint given in chit). On that ba
 
 Teams has to reach Titanic Point (*ECE Dept*) with given hint of `sinking ship` where they will see a poster (shown below), they had to click their smiling picture and send it to the given number on the poster which was placed at titanic point, and only then the volunteer placed at titanic point will give them the next clue. *(Electric Department entry point through OAT)*
 
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/smile.png)
+
 - **"uggc://punyy.runk.grpu:9001/"**
 
 In given text teams have to apply ROT13 to decrypt Caesar’s cipher which will give them a link to a website (http://chall.ehax.tech:9001/) whose source code when seen in HTML reveals a Japnese text which when transalted gives "Waku Waku" which is famous line of `Anya` - a anime character [SpyX Family] whose wall art is there in DTU behind the water tank near `Design Department`. *(Anya on wall at the DOD Water Tank)*
@@ -93,6 +95,9 @@ Teams have use their mobile radio app with earlead as antenna and roam around th
 Deciphering the given 1800'' as 18000 seconds which is equal 30 minutes, Thus text becomes "Free if more than 30 minutes" giving hint of Dominos as the next location *(Raj Soin)*
 
 
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/chits.png)
+
+
 ## Event Materials
 
 - [**Rulebook Link**](https://drive.google.com/file/d/1DG3CxDVM_Sb2wTJia7k06Xbun0_o38O6/view?usp=sharing)
@@ -122,8 +127,6 @@ Deciphering the given 1800'' as 18000 seconds which is equal 30 minutes, Thus te
 - Shreyansh ( Flag Point )
 - Stanzin Chosdan ( Flag Point )
 - Shreyas ( Sports Complex )
-- Trishanth ( Sports Complex )
-- Adeep ( Titanic Point )
 - Jaithra Ghoshikonda ( Titanic Point )
 - Sudanshu ( Waku Waku Wall )
 - Kirti Pandey ( HIMS )

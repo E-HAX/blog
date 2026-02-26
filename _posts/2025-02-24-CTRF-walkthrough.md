@@ -149,7 +149,7 @@ The first edition of CTRF was an immense success, with enthusiastic participatio
 ![Capture the real flag - EHAX](/assets/img/blogs/2025/ctf/Team%20EHAX.jpeg)
 
 ### Yoo, its a hint
-![Capture the real flag - EHAX](/assets/img/blogs/2025/ctf/hint.jpeg)
+![Capture the real flag - EHAX](/assets/img/blogs/2025/ctf/hint.png)
 
 
 

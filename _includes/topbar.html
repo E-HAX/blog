@@ -49,6 +49,14 @@
             </a>
           </li>
         {% endfor %}
+        {% if site.main_site.url %}
+          <li class="nav-external">
+            <a href="{{ site.main_site.url }}" class="nav-link">
+              {{- site.main_site.label | default: site.main_site.url -}}
+              <i class="fas fa-arrow-up-right-from-square" aria-hidden="true"></i>
+            </a>
+          </li>
+        {% endif %}
       </ul>
     </nav>
 

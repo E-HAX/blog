@@ -16,11 +16,10 @@ timezone: Asia/Kolkata
 
 title: EHAX # the main title
 
-tagline: Ethical hacking and cybersec society of DTU # it will display as the subtitle
+tagline: Cybersecurity team of DTU # it will display as the subtitle
 
 description: >- # used by seo meta and the atom feed
-  Writeups, event recaps and research from EHAX, the Ethical Hacking and
-  Cybersecurity Society of Delhi Technological University.
+  Writeups, event recaps and research from EHAX, the Cybersecurity team of DTU.
 
 # Fill in the protocol & hostname for your site.
 # E.g. 'https://username.github.io', note that it does not end with a '/'.
@@ -59,8 +58,13 @@ hero:
   eyebrow: "~/ehax/blog"
   title: Notes from the EHAX team
   lead: >-
-    CTF writeups, event recaps and security research from the Ethical Hacking
-    and Cybersecurity Society of Delhi Technological University.
+    CTF writeups, event recaps and security research from EHAX, the
+    Cybersecurity team of DTU.
+
+# The main EHAX website, linked from the navbar
+main_site:
+  label: ehax.in
+  url: https://ehax.in/
 
 # Extra links shown in the footer (label + url)
 footer_links:

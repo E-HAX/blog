@@ -39,19 +39,6 @@ This is not just an Indian problem. Sophos' *State of Ransomware in Education 20
 
 And a breach is expensive here too. IBM's *Cost of a Data Breach* report puts the average breach in India at **₹22 crore** in 2025, up from ₹17.9 crore in 2023. The research and education sector had the **highest average cost of any Indian sector, at ₹28.9 crore**. On average it took **263 days** to identify, contain and recover from a breach.
 
-## What we keep finding
-
-Over the past year, our team has carried out authorised security assessments of more than **25 Indian institutions and 40 websites**, from premier institutes to state universities and government bodies. Every one of them was done with written permission, and every finding went privately to the institution concerned.
-
-We will not name anyone. We don't need to, because the same failures repeat almost everywhere:
-
-- **Root-level access paths** on self-hosted institutional servers
-- **Databases reachable** without valid credentials
-- **Student and staff personal data** retrievable by anyone who knows where to look
-- **Admin interfaces and unpatched services** exposed to the internet, running software that is years out of date
-
-None of this is exotic. These are exactly the issues that a monitored environment notices in hours, and an unmonitored one discovers when the data turns up for sale.
-
 ## It is already happening
 
 These are matters of public record:
@@ -106,7 +93,7 @@ If you are responsible for IT or security at an Indian institution, try answerin
 2. Do you have a **complete list** of everything you expose to the internet?
 3. Where are the **last 180 days of logs** for those systems, and could you search them today?
 4. If you found a breach right now, **who would report it to CERT-In** within six hours, and do they know that is their job?
-5. Which of your systems hold **student or staff personal data**, and when were they last tested?
+5. Which of your systems hold **student or staff personal data**, and who can reach them from the internet?
 
 If the honest answer to the first question is "nobody", you are not alone. That is the default across most of the country, and it is the gap attackers are counting on.
 
@@ -114,16 +101,12 @@ Every institution in India is going to be watched eventually: by an attacker, by
 
 ## What we've been working on at EHAX
 
-This post grew out of our own work. Over the past year, the EHAX team has been:
+This post grew out of our own work. Here is what the EHAX team has been focused on:
 
-- **Testing, with permission.** Authorised assessments across 25+ institutions and 40+ sites, with every finding reported privately to the people who could fix it, and never to a public channel.
-- **Training the next defenders.** Running CTFs and hands-on events so students learn security by breaking things legally. [EHAX CTF 2025](/posts/The-EHAX-CTF/) alone drew 1,966 participants from around the world.
-- **Working on the monitoring gap itself.** We have started building towards an AI-assisted approach on open-source tooling, where AI does the reading (triaging alerts, correlating logs, drafting incident reports) and a human makes every decision that touches a live system.
+- **An AI-native SOC for institutions.** We are building a security operations centre designed around what an Indian institution can actually afford: open-source tools (Wazuh, Suricata, Zeek) to collect logs and detect threats, an AI layer that triages alerts, correlates activity across systems and drafts CERT-In and DPDP reports, and a human analyst on every decision that changes a live system. AI does the reading, so a small team can keep watch around the clock.
+- **Training the next defenders.** Running CTFs and hands-on events so students learn security by breaking things legally. EHAX CTF 2026 alone drew more than 3,500 participants.
 
 We will write more as that work takes shape. If you work on IT or security at an Indian institution and want to compare notes, [get in touch](https://ehax.in/).
-
-> Testing systems you don't have written permission to test is an offence under Sections 43 and 66 of the IT Act. If you are a student who finds a problem, report it privately to the institution or to CERT-In.
-{: .prompt-warning }
 
 ---
 
@@ -133,7 +116,7 @@ We will write more as that work takes shape. If you work on IT or security at an
 - CERT-In annual incident statistics and category breakdowns (2022, 2025)
 - CERT-In Directions under Section 70B(6) of the IT Act, 28 April 2022
 - Digital Personal Data Protection Act, 2023, and DPDP Rules notified 13 November 2025
-- Information Technology Act, 2000: Sections 43, 66 and 70B
+- Information Technology Act, 2000: Section 70B
 - CyberPeace Foundation, e-Kawach pilot study on Indian educational institutions (July 2023 – April 2024)
 - Sophos, *The State of Ransomware in Education 2024*
 - IBM, *Cost of a Data Breach Report*: India figures for 2023, 2024 and 2025

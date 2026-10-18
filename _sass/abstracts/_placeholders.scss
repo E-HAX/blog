@@ -44,7 +44,13 @@
 %table-cell {
   padding: 0.6rem 1rem;
   font-size: 0.9rem;
-  white-space: nowrap;
+  line-height: 1.6;
+  vertical-align: top;
+
+  /* keep the label column on one line, let the rest wrap */
+  &:first-child {
+    white-space: nowrap;
+  }
 }
 
 %link-underline {

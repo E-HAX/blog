@@ -5,7 +5,7 @@
 
 $rail-top: calc(#{v.$navbar-height} + 2.5rem);
 
-/* --- layout: [rail] [article] [rail] on wide screens --- */
+/* --- layout: [ ] [article] [toc] on wide screens --- */
 
 .post-layout {
   padding-top: 2rem;
@@ -24,6 +24,7 @@ $rail-top: calc(#{v.$navbar-height} + 2.5rem);
   margin: 0 auto;
 
   @include bp.xl {
+    grid-column: 2;
     margin: 0;
   }
 }
@@ -33,16 +34,7 @@ $rail-top: calc(#{v.$navbar-height} + 2.5rem);
 
   @include bp.xl {
     display: block;
-  }
-}
-
-.post-rail-left {
-  justify-self: end;
-
-  .back-link {
-    position: -webkit-sticky;
-    position: sticky;
-    top: $rail-top;
+    grid-column: 3;
   }
 }
 
@@ -74,12 +66,8 @@ $rail-top: calc(#{v.$navbar-height} + 2.5rem);
 .post-header {
   margin-bottom: 2.5rem;
 
-  .back-link-inline {
+  .back-link {
     margin-bottom: 2rem;
-
-    @include bp.xl {
-      display: none;
-    }
   }
 
   h1 {

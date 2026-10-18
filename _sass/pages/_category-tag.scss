@@ -1,63 +1,95 @@
+@use '../abstracts/variables' as v;
 @use '../abstracts/breakpoints' as bp;
-@use '../abstracts/mixins' as mx;
 @use '../abstracts/placeholders';
 
-.dash {
-  margin: 0 0.5rem 0.6rem 0.5rem;
-  border-bottom: 2px dotted var(--dash-color);
-}
+/* --- shared page chrome (About, Tags, Archives, single tag / category) --- */
 
-#page-category,
-#page-tag {
-  ul > li {
-    line-height: 1.5rem;
-    padding: 0.6rem 0;
+.page-layout {
+  padding-top: 3rem;
 
-    /* dot */
-    &::before {
-      background: #999999;
-      width: 5px;
-      height: 5px;
-      border-radius: 50%;
-      display: block;
-      content: '';
-      position: relative;
-      top: 0.6rem;
-      margin-right: 0.5rem;
+  @include bp.md {
+    padding-top: 4.5rem;
+  }
 
-      @include bp.lt(bp.get(sm)) {
-        margin: 0 0.5rem;
-      }
-    }
-
-    /* post's title */
-    > a {
-      @extend %no-bottom-border;
-
-      font-size: 1.1rem;
-
-      @include bp.lt(bp.get(sm)) {
-        @include mx.text-ellipsis;
-      }
-    }
+  .page {
+    max-width: v.$prose-width;
   }
 }
 
-/* tag icon */
-#page-tag h1 > i {
-  font-size: 1.2rem;
+.page-header {
+  margin-bottom: 2.5rem;
+  padding-bottom: 2rem;
+  border-bottom: 1px solid var(--border);
 }
 
-#page-category h1 > i {
-  font-size: 1.25rem;
+.page-eyebrow {
+  @extend %mono-label;
+
+  color: var(--text-muted);
+  margin: 0 0 0.75rem;
 }
 
-#page-category,
-#page-tag,
-#access-lastmod {
-  a:hover {
-    @extend %link-hover;
+.page-title {
+  margin: 0;
+  font-size: clamp(2.25rem, 1.6rem + 2.4vw, 3.25rem);
+  line-height: 1.05;
+  letter-spacing: -0.035em;
+}
 
-    margin-bottom: -1px; /* Avoid jumping */
+.page-desc {
+  margin: 0.85rem 0 0;
+  font-size: 1.1rem;
+  color: var(--text-muted);
+}
+
+/* --- compact post list: title ---- date --- */
+
+.post-list-compact {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+
+  li + li {
+    border-top: 1px solid var(--border);
+  }
+
+  a {
+    display: flex;
+    align-items: baseline;
+    gap: 1rem;
+    padding: 1rem 0;
+    color: var(--text);
+
+    @extend %focus-ring;
+
+    &:hover .title {
+      color: var(--text-strong);
+      text-decoration: underline;
+      text-decoration-thickness: 1px;
+      text-underline-offset: 0.2em;
+      text-decoration-color: var(--link-underline);
+    }
+  }
+
+  .title {
+    font-family: v.$font-family-heading;
+    font-size: 1.1rem;
+    font-weight: 500;
+    line-height: 1.35;
+    transition: color 0.15s ease;
+  }
+
+  .dash {
+    flex: 1;
+    min-width: 1rem;
+    border-bottom: 1px dashed var(--border-strong);
+    transform: translateY(-0.3rem);
+  }
+
+  .date {
+    flex-shrink: 0;
+    font-family: v.$font-family-mono;
+    font-size: 0.8rem;
+    color: var(--text-muted);
   }
 }

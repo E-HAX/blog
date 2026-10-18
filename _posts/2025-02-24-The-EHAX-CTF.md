@@ -1,14 +1,15 @@
 ---
 title: EHAX CTF - 2025
-date: 2025-02-24 12:00:00 +/-TTTT
+description: >-
+  Invictus 2025: a resounding success. A recap of the first edition of EHAX CTF:
+  24 hours, 31 challenges and 1,966 registered participants across 1,188 teams.
+date: 2025-02-24 12:00:00 +0530
 tags: [invictus25]     # TAG names should always be lowercase
 author: stani
-thumbnail: /assets/img/blogs/2025/ctf/DTU%20TIMES.jpeg
+image:
+  path: /assets/img/blogs/2025/ctf/DTU%20TIMES.jpeg
+  alt: Participants at work during EHAX CTF 2025
 ---
-
-
-# EHAX CTF - Invictus 2025: A Resounding Success!
-![EHAX CTF](/assets/img/blogs/2025/ctf/DTU%20TIMES.jpeg)
 
 Presenting the first edition of **EHAX CTF**, the main event of EHAX at DTU’s **Invictus 2025**! This 24-hour **Jeopardy-style CTF** was held from **February 15th to 16th**, featuring a total of **31 challenges** with a maximum of **12,355 points** to be earned. The event also included an **offline round** conducted on **February 16th from 11 AM to 4 PM** at Pragya Bhavan FF1.
 

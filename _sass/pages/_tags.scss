@@ -1,23 +1,39 @@
+@use '../abstracts/variables' as v;
 @use '../abstracts/breakpoints' as bp;
-
-.tag {
-  border-radius: 0.7em;
-  padding: 6px 8px 7px;
-  margin-right: 0.8rem;
-  line-height: 3rem;
-  letter-spacing: 0;
-  border: 1px solid var(--tag-border) !important;
-  box-shadow: 0 0 3px 0 var(--tag-shadow);
-
-  span {
-    margin-left: 0.6em;
-    font-size: 0.7em;
-    font-family: Oswald, sans-serif;
-  }
-}
+@use '../abstracts/placeholders';
 
 #tags {
-  @include bp.lt(bp.get(lg)) {
-    justify-content: center !important;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(11rem, 1fr));
+  gap: 0.75rem;
+
+  .tag-tile {
+    display: flex;
+    flex-direction: column;
+    gap: 0.35rem;
+    padding: 1rem 1.1rem;
+    border: 1px solid var(--border);
+    border-radius: v.$radius-md;
+    background: var(--surface);
+    transition: border-color 0.2s ease, transform 0.2s ease;
+
+    @extend %focus-ring;
+
+    &:hover {
+      border-color: var(--border-strong);
+      transform: translateY(-2px);
+    }
+  }
+
+  .tag-name {
+    font-family: v.$font-family-mono;
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--text-strong);
+  }
+
+  .tag-count {
+    font-size: 0.8rem;
+    color: var(--text-muted);
   }
 }

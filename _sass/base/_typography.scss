@@ -3,48 +3,28 @@
 @use '../abstracts/mixins' as mx;
 @use '../abstracts/placeholders';
 
-@for $i from 1 through 5 {
-  h#{$i} {
-    @extend %heading;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  @extend %heading;
 
-    @if $i > 1 {
-      @extend %anchor;
-    }
-
-    @if $i < 5 {
-      $size-factor: 0.25rem;
-
-      @if $i > 1 {
-        $size-factor: 0.18rem;
-
-        main & {
-          @if $i == 2 {
-            margin: 2.5rem 0 1.25rem;
-          } @else {
-            margin: 2rem 0 1rem;
-          }
-        }
-      }
-
-      & {
-        font-size: 1rem + (5 - $i) * $size-factor;
-      }
-    } @else {
-      font-size: 1.05rem;
-    }
-  }
+  margin-top: 0;
 }
 
 a {
-  @extend %link-color;
-
+  color: inherit;
   text-decoration: none;
+
+  @extend %focus-ring;
 }
 
 img {
   max-width: 100%;
   height: auto;
-  transition: all 0.35s ease-in-out;
+  transition: filter 0.35s ease-in-out;
 
   .blur & {
     $blur: 20px;
@@ -54,85 +34,28 @@ img {
   }
 }
 
-blockquote {
-  border-left: 0.125rem solid var(--blockquote-border-color);
-  padding-left: 1rem;
-  color: var(--blockquote-text-color);
-  margin-top: 0.5rem;
-
-  > p:last-child {
-    margin-bottom: 0;
-  }
-
-  &[class^='prompt-'] {
-    border-left: 0;
-    position: relative;
-    padding: 1rem 1rem 1rem 3rem;
-    color: var(--prompt-text-color);
-
-    @extend %rounded;
-
-    &::before {
-      text-align: center;
-      width: 3rem;
-      position: absolute;
-      left: 0.25rem;
-      margin-top: 0.4rem;
-      text-rendering: auto;
-      -webkit-font-smoothing: antialiased;
-    }
-  }
-
-  @include mx.prompt('tip', '\f0eb', $fa-style: 'regular');
-  @include mx.prompt('info', '\f06a', $rotate: 180);
-  @include mx.prompt('warning', '\f06a');
-  @include mx.prompt('danger', '\f071');
-}
-
-kbd {
-  font-family: Lato, sans-serif;
-  display: inline-block;
-  vertical-align: middle;
-  line-height: 1.3rem;
-  min-width: 1.75rem;
-  text-align: center;
-  margin: 0 0.3rem;
-  padding-top: 0.1rem;
-  color: var(--kbd-text-color);
-  background-color: var(--kbd-bg-color);
-  border-radius: v.$radius-sm;
-  border: solid 1px var(--kbd-wrap-color);
-  box-shadow: inset 0 -2px 0 var(--kbd-wrap-color);
-}
-
 hr {
-  border-color: var(--main-border-color);
+  border: 0;
+  border-top: 1px solid var(--border);
   opacity: 1;
 }
 
-footer {
-  background-color: var(--main-bg);
-  height: v.$footer-height;
-  border-top: 1px solid var(--main-border-color);
-
-  @extend %text-xs;
-
-  a {
-    @extend %text-highlight;
-
-    &:hover {
-      @extend %link-hover;
-    }
-  }
-
-  em {
-    @extend %text-highlight;
-  }
-
-  p {
-    text-align: center;
-    margin-bottom: 0;
-  }
+kbd {
+  display: inline-block;
+  min-width: 1.6rem;
+  margin: 0 0.15rem;
+  padding: 0.1rem 0.4rem;
+  font-family: v.$font-family-mono;
+  font-size: 0.75em;
+  line-height: 1.4;
+  text-align: center;
+  vertical-align: middle;
+  color: var(--text-strong);
+  background-color: var(--kbd-bg);
+  border: 1px solid var(--kbd-border);
+  border-bottom-width: 2px;
+  border-radius: v.$radius-sm;
+  box-shadow: none;
 }
 
 /* fontawesome icons */
@@ -147,60 +70,220 @@ sup {
   @extend %sup-fn-target;
 }
 
-main {
-  line-height: 1.75;
+/* --- Markdown prose --- */
 
-  h1 {
-    margin-top: 2rem;
+.content {
+  color: var(--text);
+  font-size: 1.0625rem;
+  line-height: 1.8;
+  overflow-wrap: break-word;
 
-    @include bp.lg {
-      margin-top: 3rem;
-    }
+  > :first-child {
+    margin-top: 0;
   }
 
   p {
-    > a.popup {
-      &:not(.normal):not(.left):not(.right) {
-        @include mx.align-center;
+    margin: 0 0 1.35rem;
+  }
+
+  h2,
+  h3,
+  h4,
+  h5 {
+    @extend %anchor;
+
+    > span {
+      margin-right: 0.4rem !important;
+    }
+  }
+
+  h2 {
+    font-size: 1.65rem;
+    margin: 3.25rem 0 1rem;
+    letter-spacing: -0.025em;
+  }
+
+  h3 {
+    font-size: 1.3rem;
+    margin: 2.5rem 0 0.85rem;
+  }
+
+  h4 {
+    font-size: 1.1rem;
+    margin: 2rem 0 0.75rem;
+  }
+
+  h5 {
+    font-size: 1rem;
+    margin: 1.75rem 0 0.75rem;
+  }
+
+  strong {
+    color: var(--text-strong);
+    font-weight: 600;
+  }
+
+  a {
+    &.popup {
+      @extend %no-cursor;
+      @extend %img-caption;
+
+      cursor: zoom-in;
+      margin: 0.75rem 0;
+    }
+
+    &:not(.img-link):not(.anchor):not(.footnote):not(.reversefootnote) {
+      @extend %link-underline;
+    }
+  }
+
+  /* images */
+  p > a.popup {
+    &:not(.normal):not(.left):not(.right) {
+      display: flex;
+      width: fit-content;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  .img-link {
+    border-radius: v.$radius-md;
+    overflow: hidden;
+    border: 1px solid var(--border);
+    vertical-align: top;
+
+    img {
+      display: block;
+    }
+
+    + .img-link {
+      margin-top: 1rem;
+    }
+  }
+
+  ol,
+  ul {
+    &:not([class]),
+    &.task-list {
+      -webkit-padding-start: 1.5rem;
+      padding-inline-start: 1.5rem;
+      margin-bottom: 1.35rem;
+
+      li {
+        margin: 0.4rem 0;
+        padding-left: 0.25rem;
+      }
+
+      ol,
+      ul {
+        -webkit-padding-start: 1.25rem;
+        padding-inline-start: 1.25rem;
+        margin: 0.4rem 0;
       }
     }
   }
 
-  .categories,
-  #tags,
-  #archives {
-    a:not(:hover) {
-      @extend %no-bottom-border;
+  ul.task-list {
+    -webkit-padding-start: 1.25rem;
+    padding-inline-start: 1.25rem;
+
+    li {
+      list-style-type: none;
+      padding-left: 0;
+
+      /* checkbox icon */
+      > i {
+        width: 2rem;
+        margin-left: -1.25rem;
+        color: var(--text-faint);
+
+        &.checked {
+          color: var(--checkbox-checked);
+        }
+      }
+
+      ul {
+        -webkit-padding-start: 1.75rem;
+        padding-inline-start: 1.75rem;
+      }
+    }
+
+    input[type='checkbox'] {
+      margin: 0 0.5rem 0.2rem -1.3rem;
+      vertical-align: middle;
     }
   }
 
-  @include bp.lte(bp.get(sm)) {
-    .content {
-      > blockquote[class^='prompt-'] {
-        @include mx.ml-mr(-1rem);
+  dl > dd {
+    margin-left: 1rem;
+  }
 
-        border-radius: 0;
-        max-width: none;
+  ::marker {
+    color: var(--text-faint);
+  }
+
+  hr {
+    margin: 3rem 0;
+  }
+
+  blockquote {
+    margin: 1.75rem 0;
+    padding: 0.25rem 0 0.25rem 1.25rem;
+    border-left: 2px solid var(--blockquote-border);
+    color: var(--text-muted);
+
+    > p:last-child {
+      margin-bottom: 0;
+    }
+
+    &[class^='prompt-'] {
+      position: relative;
+      padding: 1rem 1.25rem 1rem 3.25rem;
+      border-left: 3px solid;
+      border-radius: 0 v.$radius-md v.$radius-md 0;
+      color: var(--text);
+      font-size: 0.975rem;
+
+      &::before {
+        position: absolute;
+        left: 1.25rem;
+        top: 1.15rem;
+        text-rendering: auto;
+        -webkit-font-smoothing: antialiased;
       }
     }
+
+    @include mx.prompt('tip', '\f0eb', $fa-style: 'regular');
+    @include mx.prompt('info', '\f06a', $rotate: 180);
+    @include mx.prompt('warning', '\f06a');
+    @include mx.prompt('danger', '\f071');
   }
 }
 
-.footnotes > ol {
-  padding-left: 2rem;
-  margin-top: 0.5rem;
+/* --- Footnotes --- */
 
-  > li {
-    &:not(:last-child) {
-      margin-bottom: 0.3rem;
-    }
+.footnotes {
+  margin-top: 3rem;
+  font-size: 0.9rem;
+  color: var(--text-muted);
 
-    @extend %sup-fn-target;
+  > ol {
+    padding-left: 1.5rem;
+    margin-top: 0.5rem;
 
-    > p {
-      margin-left: 0.25em;
+    > li {
+      &:not(:last-child) {
+        margin-bottom: 0.3rem;
+      }
 
-      @include mx.mt-mb(0);
+      @extend %sup-fn-target;
+
+      > p {
+        margin-left: 0.25em;
+
+        @include mx.mt-mb(0);
+      }
     }
   }
 }
@@ -210,7 +293,9 @@ main {
     @include mx.ml-mr(1px);
     @include mx.pl-pr(2px);
 
-    border-bottom-style: none !important;
+    font-family: v.$font-family-mono;
+    font-size: 0.75em;
+    color: var(--text-strong);
   }
 }
 
@@ -221,46 +306,51 @@ main {
     position: relative;
     bottom: 0.25em;
     margin-left: 0.25em;
-    border-bottom-style: none !important;
   }
 }
 
-/* --- Begin of Markdown table style --- */
+/* --- Markdown table style --- */
 
 /* it will be created by Liquid */
 .table-wrapper {
   overflow-x: auto;
-  margin-bottom: 1.5rem;
+  margin: 1.75rem 0;
+  border: 1px solid var(--border);
+  border-radius: v.$radius-md;
 
   > table {
-    min-width: 100%;
-    overflow-x: auto;
+    width: 100%;
     border-spacing: 0;
+    border-collapse: collapse;
 
     thead {
-      border-bottom: solid 2px rgba(210, 215, 217, 0.75);
+      background: var(--table-head-bg);
+      border-bottom: 1px solid var(--border);
 
       th {
         @extend %table-cell;
+
+        color: var(--text-strong);
+        font-weight: 600;
       }
     }
 
     tbody {
       tr {
-        border-bottom: 1px solid var(--tb-border-color);
+        border-bottom: 1px solid var(--border);
 
-        &:nth-child(2n) {
-          background-color: var(--tb-even-bg);
+        &:last-child {
+          border-bottom: 0;
         }
 
-        &:nth-child(2n + 1) {
-          background-color: var(--tb-odd-bg);
+        &:nth-child(2n) {
+          background-color: var(--table-row-alt);
         }
 
         td {
           @extend %table-cell;
         }
       }
-    } /* tbody */
-  } /* table */
+    }
+  }
 }

@@ -20,7 +20,7 @@ At **EHAX**, we believe in **learning by breaking**—understanding security by 
 
 🌐 More About EHAX - 
 
-- Website: [https://ehax.tech/](https://ehax.tech/)
+- Website: [https://ehax.in/](https://ehax.in/)
 - CTF Time: [https://ctftime.org/team/270643](https://ctftime.org/team/270643)
 - Github: [https://github.com/E-HAX/](https://github.com/E-HAX/)
 - Linkedin: [https://www.linkedin.com/company/ehax/](https://www.linkedin.com/company/ehax/)

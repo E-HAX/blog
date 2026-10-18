@@ -30,17 +30,11 @@
 }
 
 @mixin placeholder {
-  color: var(--text-muted-color) !important;
+  color: var(--text-faint) !important;
 }
 
 @mixin placeholder-focus {
   opacity: 0.6;
-}
-
-@mixin label($font-size: 1rem, $font-weight: 600, $color: var(--label-color)) {
-  color: $color;
-  font-size: $font-size;
-  font-weight: $font-weight;
 }
 
 @mixin align-center {
@@ -52,10 +46,11 @@
 @mixin prompt($type, $fa-content, $fa-style: 'solid', $rotate: 0) {
   &.prompt-#{$type} {
     background-color: var(--prompt-#{$type}-bg);
+    border-left-color: var(--prompt-#{$type});
 
     &::before {
       content: $fa-content;
-      color: var(--prompt-#{$type}-icon-color);
+      color: var(--prompt-#{$type});
       font: var(--fa-font-#{$fa-style});
 
       @if $rotate != 0 {

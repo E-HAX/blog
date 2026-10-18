@@ -1,10 +1,26 @@
-<!-- The Search results -->
+<!-- The Search dialog -->
 
-<div id="search-result-wrapper" class="d-flex justify-content-center d-none">
-  <div class="col-11 content">
-    <div id="search-hints">
-      {% include_cached trending-tags.html %}
+<dialog id="search-dialog" aria-label="Search">
+  <div class="search-panel">
+    <search id="search">
+      <i class="fas fa-search fa-fw"></i>
+      <input
+        id="search-input"
+        type="search"
+        aria-label="search"
+        autocomplete="off"
+        placeholder="{{ site.data.locales[include.lang].search.hint | capitalize }} posts..."
+      >
+      <button type="button" id="search-cancel" aria-label="{{ site.data.locales[include.lang].search.cancel }}">
+        <kbd>Esc</kbd>
+      </button>
+    </search>
+
+    <div class="search-body">
+      <div id="search-hints">
+        {% include_cached trending-tags.html lang=include.lang %}
+      </div>
+      <div id="search-results"></div>
     </div>
-    <div id="search-results" class="d-flex flex-wrap justify-content-center text-muted mt-3"></div>
   </div>
-</div>
+</dialog>

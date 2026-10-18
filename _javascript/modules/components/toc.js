@@ -16,7 +16,7 @@ function refresh(e) {
 }
 
 function init() {
-  if (document.querySelector('main>article[data-toc="true"]') === null) {
+  if (document.querySelector('article[data-toc="true"]') === null) {
     return;
   }
 

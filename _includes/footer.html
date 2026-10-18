@@ -1,49 +1,55 @@
 <!-- The Footer -->
 
-<footer
-  aria-label="Site Info"
-  class="
-    d-flex flex-column justify-content-center text-muted
-    flex-lg-row justify-content-lg-between align-items-lg-center pb-lg-3
-  "
->
-  <p>
-    {{- '©' }}
-    <time>{{ 'now' | date: '%Y' }}</time>
+<footer id="site-footer" aria-label="Site Info">
+  <div class="wrap footer-inner">
+    <div class="footer-brand">
+      <a href="{{ '/' | relative_url }}" class="footer-title">{{ site.title }}<span>/blog</span></a>
+      <p>{{ site.tagline }}</p>
+    </div>
 
-    {% if site.social.links %}
-      <a href="{{ site.social.links[0] }}">{{ site.social.name }}</a>.
-    {% else %}
-      <em class="fst-normal">{{ site.social.name }}</em>.
-    {% endif %}
+    <nav class="footer-links" aria-label="Footer">
+      {% for link in site.footer_links %}
+        <a href="{{ link.url }}" target="_blank" rel="noopener noreferrer">{{ link.label }}</a>
+      {% endfor %}
+      <a href="{{ '/feed.xml' | relative_url }}">RSS</a>
+    </nav>
+  </div>
 
-    {% if site.data.locales[include.lang].copyright.brief %}
-      <span
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="{{ site.data.locales[include.lang].copyright.verbose }}"
-      >
-        {{- site.data.locales[include.lang].copyright.brief -}}
-      </span>
-    {% endif %}
-  </p>
+  <div class="wrap">
+    <div class="footer-meta">
+      <p>
+        {{- '©' }}
+        <time>{{ 'now' | date: '%Y' }}</time>
+        {{ site.social.name }}.
+        {% if site.data.locales[include.lang].copyright.brief %}
+          <span
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="{{ site.data.locales[include.lang].copyright.verbose }}"
+          >
+            {{- site.data.locales[include.lang].copyright.brief -}}
+          </span>
+        {% endif %}
+      </p>
 
-  <p>
-    {%- capture _platform -%}
-      <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
-    {%- endcapture -%}
+      <p>
+        {%- capture _platform -%}
+          <a href="https://jekyllrb.com" target="_blank" rel="noopener">Jekyll</a>
+        {%- endcapture -%}
 
-    {%- capture _theme -%}
-      <a
-        data-bs-toggle="tooltip"
-        data-bs-placement="top"
-        title="v{{ theme.version }}"
-        href="https://github.com/cotes2020/jekyll-theme-chirpy"
-        target="_blank"
-        rel="noopener"
-      >Chirpy</a>
-    {%- endcapture -%}
+        {%- capture _theme -%}
+          <a
+            data-bs-toggle="tooltip"
+            data-bs-placement="top"
+            title="v{{ theme.version }}"
+            href="https://github.com/cotes2020/jekyll-theme-chirpy"
+            target="_blank"
+            rel="noopener"
+          >Chirpy</a>
+        {%- endcapture -%}
 
-    {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
-  </p>
+        {{ site.data.locales[include.lang].meta | replace: ':PLATFORM', _platform | replace: ':THEME', _theme }}
+      </p>
+    </div>
+  </div>
 </footer>

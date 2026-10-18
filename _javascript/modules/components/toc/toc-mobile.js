@@ -14,6 +14,7 @@ const CLOSING = 'closing';
 export class TocMobile {
   static #invisible = true;
   static #barHeight = 16 * 3; // 3rem
+  static #navHeight = 16 * 4; // the sticky navbar (4rem at most)
 
   static options = {
     tocSelector: '#toc-popup-content',
@@ -23,7 +24,7 @@ export class TocMobile {
     orderedList: false,
     scrollSmooth: false,
     collapseDepth: 4,
-    headingsOffset: this.#barHeight
+    headingsOffset: this.#barHeight + this.#navHeight + 16
   };
 
   static initBar() {
@@ -33,7 +34,7 @@ export class TocMobile {
           $tocBar.classList.toggle('invisible', entry.isIntersecting);
         });
       },
-      { rootMargin: `-${this.#barHeight}px 0px 0px 0px` }
+      { rootMargin: `-${this.#barHeight + this.#navHeight}px 0px 0px 0px` }
     );
 
     observer.observe($soloTrigger);

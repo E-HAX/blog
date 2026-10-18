@@ -1,5 +1,5 @@
-import { basic, initSidebar, initTopbar } from './modules/layouts';
+import { basic, initNavbar, initTopbar } from './modules/layouts';
 
-initSidebar();
+initNavbar();
 initTopbar();
 basic();

@@ -1,7 +1,7 @@
 <!-- Post sharing snippet -->
 
-<div class="share-wrapper d-flex align-items-center">
-  <span class="share-label text-muted">{{ site.data.locales[include.lang].post.share }}</span>
+<div class="share-wrapper">
+  <span class="share-label">{{ site.data.locales[include.lang].post.share }}</span>
   <span class="share-icons">
     {% capture title %}{{ page.title }} - {{ site.title }}{% endcapture %}
     {% assign title = title | uri_escape %}
@@ -40,13 +40,13 @@
     <button
       id="copy-link"
       aria-label="Copy link"
-      class="btn small"
+      class="btn"
       data-bs-toggle="tooltip"
       data-bs-placement="top"
       title="{{ site.data.locales[include.lang].post.button.share_link.title }}"
       data-title-succeed="{{ site.data.locales[include.lang].post.button.share_link.succeed }}"
     >
-      <i class="fa-fw fas fa-link pe-none fs-6"></i>
+      <i class="fa-fw fas fa-link pe-none"></i>
     </button>
   </span>
 </div>

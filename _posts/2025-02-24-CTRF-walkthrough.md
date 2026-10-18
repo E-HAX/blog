@@ -1,14 +1,17 @@
 ---
 title: Capture The Real Flag walkthrough
-date: 2025-02-24 12:00:00 +/-TTTT
+description: >-
+  A journey of fun and excitement: how EHAX's Capture The Real Flag treasure hunt
+  took over Day 0 of Invictus 2025, with the stats, the winners and every clue.
+date: 2025-02-24 12:00:00 +0530
 tags: [invictus25]     # TAG names should always be lowercase
 author: stani
+image:
+  path: /assets/img/blogs/2025/ctrf/Debrief.jpg
+  alt: Participants gathered for the CTRF debrief at DTU
 ---
-# Capture The Real Flag (CTRF) walkthrough, a journey of fun and excitement
 
 ## EHAX’s CTRF Captured Day 0 of Invictus!
-
-![Capture the real flag - EHAX](/assets/img/blogs/2025/ctrf/Debrief.jpg)
 
 In the first edition of CTRF, we successfully popularized CTRF in a more gamified way as a treasure hunt, attracting massive participation. Our volunteers were kept busy for the entire three-hour event. Both the team and the participants thoroughly enjoyed the experience, making our event a huge success.
 

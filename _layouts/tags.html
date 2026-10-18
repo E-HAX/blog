@@ -3,18 +3,18 @@ layout: page
 # All the Tags of posts.
 ---
 
-<div id="tags" class="d-flex flex-wrap mx-xl-2">
-  {% assign tags = '' | split: '' %} {% for t in site.tags %} {% assign tags =
-  tags | push: t[0] %} {% endfor %} {% assign sorted_tags = tags | sort_natural
-  %} {% for t in sorted_tags %}
-  <div>
-    <a
-      class="tag"
-      href="{{ t | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}"
-    >
-      {{ t -}}
-      <span class="text-muted">{{ site.tags[t].size }}</span>
+{% assign tags = '' | split: '' %}
+{% for t in site.tags %}
+  {% assign tags = tags | push: t[0] %}
+{% endfor %}
+{% assign sorted_tags = tags | sort_natural %}
+
+<div id="tags">
+  {% for t in sorted_tags %}
+    {% assign size = site.tags[t].size %}
+    <a class="tag-tile" href="{{ t | slugify | url_encode | prepend: '/tags/' | append: '/' | relative_url }}">
+      <span class="tag-name">#{{ t }}</span>
+      <span class="tag-count">{{ size }} {% if size == 1 %}post{% else %}posts{% endif %}</span>
     </a>
-  </div>
   {% endfor %}
 </div>

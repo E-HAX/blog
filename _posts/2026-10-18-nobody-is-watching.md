@@ -112,6 +112,16 @@ If the honest answer to the first question is "nobody", you are not alone. That 
 
 Every institution in India is going to be watched eventually: by an attacker, by a regulator after an incident, or by someone it chose. The only real question is which comes first.
 
+## What we've been working on at EHAX
+
+This post grew out of our own work. Over the past year, the EHAX team has been:
+
+- **Testing, with permission.** Authorised assessments across 25+ institutions and 40+ sites, with every finding reported privately to the people who could fix it, and never to a public channel.
+- **Training the next defenders.** Running CTFs and hands-on events so students learn security by breaking things legally. [EHAX CTF 2025](/posts/The-EHAX-CTF/) alone drew 1,966 participants from around the world.
+- **Working on the monitoring gap itself.** We have started building towards an AI-assisted approach on open-source tooling, where AI does the reading (triaging alerts, correlating logs, drafting incident reports) and a human makes every decision that touches a live system.
+
+We will write more as that work takes shape. If you work on IT or security at an Indian institution and want to compare notes, [get in touch](https://ehax.in/).
+
 > Testing systems you don't have written permission to test is an offence under Sections 43 and 66 of the IT Act. If you are a student who finds a problem, report it privately to the institution or to CERT-In.
 {: .prompt-warning }
 

@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630">
+<defs><pattern id="dots" width="24" height="24" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="1" fill="#27272c"/></pattern><linearGradient id="red" x1="0" x2="1"><stop stop-color="#fa4755"/><stop offset="1" stop-color="#bc294c"/></linearGradient><linearGradient id="glass" x1="0" y1="0" x2="1" y2="1"><stop stop-color="#25252a"/><stop offset="1" stop-color="#0f1013"/></linearGradient><filter id="glow"><feGaussianBlur stdDeviation="22"/></filter></defs>
+<rect width="1200" height="630" fill="#0b0b0d"/><rect width="1200" height="630" fill="url(#dots)" opacity=".55"/>
+<circle cx="920" cy="330" r="205" fill="#b52643" opacity=".16" filter="url(#glow)"/>
+<rect x="29" y="28" width="1142" height="574" rx="20" fill="none" stroke="#34343a" stroke-width="2"/>
+<circle cx="80" cy="121" r="7" fill="#f44c58"/><text x="98" y="126" fill="#a8a8af" font-size="18" font-family="monospace" letter-spacing="3">ACCOUNT SECURITY · META</text>
+<text x="76" y="243" fill="#fafafa" font-size="76" font-family="Arial, sans-serif" font-weight="800" letter-spacing="-3">Recovered</text>
+<text x="76" y="332" fill="#fafafa" font-size="76" font-family="Arial, sans-serif" font-weight="800" letter-spacing="-3">Isn't <tspan fill="#fa4755">Secured.</tspan></text>
+<text x="79" y="390" fill="#a6a6ac" font-size="22" font-family="Arial, sans-serif">Cross-app recovery is only the beginning.</text>
+<text x="79" y="423" fill="#a6a6ac" font-size="22" font-family="Arial, sans-serif">Protect the recovery channel. Revoke sessions.</text>
+<text x="79" y="456" fill="#a6a6ac" font-size="22" font-family="Arial, sans-serif">Verify who still controls the account.</text>
+<text x="79" y="557" fill="#f2f2f2" font-size="19" font-family="monospace" font-weight="bold">E-HAX</text><text x="160" y="557" fill="#85858d" font-size="18" font-family="monospace">|  Adeeb (ADB)  ·  blog.ehax.in</text>
+<rect x="719" y="111" width="401" height="404" rx="17" fill="url(#glass)" stroke="#404048" stroke-width="2"/>
+<rect x="719" y="111" width="401" height="49" rx="17" fill="#1b1b20"/><circle cx="748" cy="136" r="5" fill="#56565e"/><circle cx="765" cy="136" r="5" fill="#56565e"/><circle cx="782" cy="136" r="5" fill="#56565e"/><text x="810" y="142" fill="#c3c3c8" font-family="monospace" font-size="15">incident response</text>
+<text x="749" y="207" fill="#f2f2f5" font-family="monospace" font-size="19" font-weight="bold">META ACCOUNTS CENTER</text>
+<rect x="747" y="229" width="347" height="57" rx="8" fill="#28181f" stroke="#f24c66"/><text x="766" y="264" fill="#ff7283" font-family="monospace" font-size="19">01  Recovery email</text>
+<text x="766" y="323" fill="#e3e3e7" font-family="monospace" font-size="19">02  Active sessions</text><text x="766" y="380" fill="#e3e3e7" font-family="monospace" font-size="19">03  2FA &amp; access</text>
+<path d="M767 410H1066" stroke="#35353c"/><circle cx="773" cy="456" r="9" fill="#48b781"/><path d="M769 455l3 3 6-7" fill="none" stroke="#07140e" stroke-width="2"/><text x="794" y="463" fill="#a3a3ab" font-family="monospace" font-size="16">CONTROL VERIFIED</text>
+</svg>

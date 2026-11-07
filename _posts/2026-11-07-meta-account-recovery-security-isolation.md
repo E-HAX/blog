@@ -6,6 +6,9 @@ description: >-
 date: 2026-11-07 20:30:00 +0530
 author: adb
 tags: [instagram, account-recovery, incident-response, identity-security]
+image:
+  path: /assets/img/blogs/2026/meta-account-recovery/cover.svg
+  alt: "Recovered Isn't Secured — Meta account recovery and security isolation"
 ---
 
 A recovered Instagram account can look completely normal while its recovery configuration still needs attention. The password works. The feed loads. But are you sure every unauthorized session is gone? Is the recovery address still trustworthy? And if Instagram's own security screen breaks, is there another route to the settings you need?
